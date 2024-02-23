@@ -13,12 +13,26 @@ cs290 Winter 2024 assignment 05
   4. Remember to submit a link to a repo or a copy of your code to Moodle!  
 
 
-# DESIGN - RETURN TO DOGESPLORER
+# DESIGN - RETURN TO DOGESPLORER  
 
-* mobile functionality - PRIORITIZE
-* Create main page
-* search bar at top
-* remove videos, add doge news video
-* dynamic page creation
-* use GET and POST
-* 
+* mobile functionality - PRIORITIZE  
+* Create main page  
+* search bar at top  
+* collapsible menu to the left  
+* remove videos, add doge news video  
+* dynamic page creation upon search
+* add a news page  
+* add a sitemap  
+* add breadcrumbs (real ones this time?)  
+* use GET and POST  
+
+
+
+
+# GET/POST NOTES
+
+* GET is insecure and has a character limit. Never use GET for sensitive info  
+* POST is secure and is unlimited in terms of length.  
+* Use inside a python script. Python script runs the page by communicating with the server  
+* there is really only one page that will be fetched. What changes is the information being transmitted.  
+* make Dogesplorer the number 1 Doge Explorer on the 'net!  
