@@ -1,4 +1,4 @@
-# assignment05  
+# assignment05 - RETURN TO DOGESPLORER  
 cs290 Winter 2024 assignment 05  
 
 
@@ -13,9 +13,9 @@ cs290 Winter 2024 assignment 05
   4. Remember to submit a link to a repo or a copy of your code to Moodle!  
 
 
-# DESIGN - RETURN TO DOGESPLORER  
+# DESIGN  
 
-* mobile functionality - PRIORITIZE  
+* mobile functionality in terms of display and usability - PRIORITIZE  
 * Create main page  
 * search bar at top  
 * collapsible menu to the left  
