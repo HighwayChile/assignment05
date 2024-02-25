@@ -25,6 +25,7 @@ cs290 Winter 2024 assignment 05
 * add a sitemap  
 * add breadcrumbs (real ones this time?)  
 * use GET and POST  
+* add doge price GRAPH FUNCTION on it's own page first?  
 
 
 
