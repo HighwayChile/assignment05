@@ -15,17 +15,24 @@ cs290 Winter 2024 assignment 05
 
 # DESIGN  
 
+I feel more comfortable making a new Dogesplorer site with the tools I have been shown over the 
+past few weeks. I am still not 100% sure how I might access the blockchain information, but I know 
+I could set up a simple web API that uses the information from dogechain.info. I plan on using internet 
+resources, most notably w3schools, geeksforgeeks, and chatGPT. I will make better comments, and plan to 
+streamline styling.  
+
+another resource I must use is the "Web API" one on dogechain.info
+
 * mobile functionality in terms of display and usability - PRIORITIZE  
 * Create main page  
 * search bar at top  
-* collapsible menu to the left  
-* remove videos, add doge news video  
-* dynamic page creation upon search
+* collapsible menu to the left   
+* dynamic page creation upon search - backburner
 * add a news page  
 * add a sitemap  
 * add breadcrumbs (real ones this time?)  
 * use GET and POST  
-* add doge price GRAPH FUNCTION on it's own page first?  
+* add doge price GRAPH FUNCTION on it's own page first? - or delegate to API?  
 
 
 
