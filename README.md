@@ -25,11 +25,11 @@ another resource I must use is the "Web API" one on dogechain.info
 
 * mobile functionality in terms of display and usability - PRIORITIZE  
 * Create main page - done
-* search bar at top - done
+* search bar at top - done(doesn't do anything)
 * collapsible menu to the left - todo  
 * dynamic page creation upon search - backburner  
 * USE PYTHON SERVER TO RUN A FUNCTION THAT DOES SOMETHING. - PRIORITIZE!  
-  WHAT SHOULD MY FUNCTION DO?  
+  WHAT SHOULD MY FUNCTION DO? -Maybe make my search function save the search as text string in a file, then another button to call that text.  
 * add a news page  
 * add a sitemap  
 * add breadcrumbs (real ones this time?)  
