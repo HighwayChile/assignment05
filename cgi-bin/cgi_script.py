@@ -95,12 +95,7 @@ print("""
     <!-- items: search bar, sitemap, graph, news video, news links -->
     <!-- articles: mini graph, current difficulty, number of blocks, recent trades -->
   
-
-
-    <!-- Remove these breaks befor release -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
@@ -111,61 +106,26 @@ print("""
 
 
 # do some python stuff
-form_data = cgi.FieldStorage()
-input_message: str = form_data.getvalue("input_message", "(no message entered)")
+# Get form data
+form = cgi.FieldStorage()
+user_input: str = form.getvalue("user_input", "none")
 
-# Store data in a text file
+# declare file path
 file_path = "user_message.txt"
 
-with open(file_path, "r+") as file:
-    file.write(input_message + '\n')
-
-
-
-
+# open in append mode. I wanted to get a list
+with open(file_path, "a") as file:
+    file.write(user_input + "\n")
 
 
 print("""
       
-
-
-  <p>Previous message: %s</p>
-  <p>form</p>
-  <form method="post" action="cgi_script.py">
-    <p>message: <input type="text" name="input_message" /></p>
-  </form>
-      
-<footer>
-    <!-- add contact info here -->
-</footer>
-
-
+  
+<form method="post" action="cgi_script.py">
+  <p>Enter your data: <input type="text" name="user_input"></p>
+<p>previously entered data: %s</p>
+</form>
 </body>
 </html>
       
-""" % input_message)
-
-
-
-# # Get form data
-# form = cgi.FieldStorage()
-# user_input = form.getvalue("user_input")
-
-# # Store data in a text file
-# file_path = "user_message.txt"
-
-# with open(file_path, "r+") as file:
-#     file.write(user_input + '\n')
-
-
-# print("""
-      
-#   <p>previous mess %s</p>
-#   <form method="post" action="/cgi-bin/store_data.py">
-#     Enter your data: <input type="text" name="user_input">
-#     <p>message: <input type="text" name="user_input">
-# </form>
-# </body>
-# </html>
-      
-#       """)
+      """ % user_input)
