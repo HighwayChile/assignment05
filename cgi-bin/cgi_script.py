@@ -3,6 +3,8 @@
 # This file containing the html must be in a cgi-bin sub-directory.
 
 import cgi
+import requests
+import cgitb
 
 print("content-type: text/html \n")
 
@@ -112,7 +114,20 @@ print("""
 form_data = cgi.FieldStorage()
 input_message: str = form_data.getvalue("input_message", "(no message entered)")
 
+# Store data in a text file
+file_path = "user_message.txt"
+
+with open(file_path, "r+") as file:
+    file.write(input_message + '\n')
+
+
+
+
+
+
 print("""
+      
+
 
   <p>Previous message: %s</p>
   <p>form</p>
@@ -129,3 +144,28 @@ print("""
 </html>
       
 """ % input_message)
+
+
+
+# # Get form data
+# form = cgi.FieldStorage()
+# user_input = form.getvalue("user_input")
+
+# # Store data in a text file
+# file_path = "user_message.txt"
+
+# with open(file_path, "r+") as file:
+#     file.write(user_input + '\n')
+
+
+# print("""
+      
+#   <p>previous mess %s</p>
+#   <form method="post" action="/cgi-bin/store_data.py">
+#     Enter your data: <input type="text" name="user_input">
+#     <p>message: <input type="text" name="user_input">
+# </form>
+# </body>
+# </html>
+      
+#       """)
