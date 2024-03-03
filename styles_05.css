@@ -40,6 +40,19 @@ h1 {
     height: 26px;
 }
 
+.price_display {
+    float: left;
+    position: sticky;
+    top: 5px;
+}
+
+#doge_tag {
+    display: inline-block;
+}
+
+#doge_price {
+    display: inline;
+}
 
 a:link {
     color: blue;

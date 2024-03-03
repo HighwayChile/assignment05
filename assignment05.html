@@ -45,6 +45,11 @@
 
     </nav>
 
+    <div class="price_display">
+      <div id="doge_tag"><h3>Doge Price: </h3></div>
+      <div id="doge_price">Finding latest price...</div>
+    </div>
+
 
 
 
@@ -62,9 +67,43 @@
 
   </body>
 
+
 <footer>
     <!-- add contact info here -->
 </footer>
+
+
+
+<script>
+  // CoinGecko API was suggested to me by the chatGPT. I was trying to use doge
+  // chain for a long time and chatGPT was like "no, don't do that." ChatGPT was right.
+  // Dogechain.info API is really advanced, but it does different things. Mostly transaction
+  // and wallet information. Would like that for my site too.
+  // Function to fetch and update the DOGE price
+  function fetchDogePrice() {
+      // I have no key for coingecko. Limits fetches to 5 per minute.
+      const apiKey = 'NO_KEY';
+      const apiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=dogecoin&vs_currencies=usd&apiKey=${apiKey}`;
+
+      // Fetch DOGE price from CoinGecko API
+      fetch(apiUrl)
+          .then(response => response.json())
+          .then(data => {
+              const dogePrice = data.dogecoin.usd;
+              document.getElementById('doge_price').innerText = `$${dogePrice} USD`;
+          })
+          .catch(error => {
+              console.error('Error fetching DOGE price:', error);
+              document.getElementById('doge_price').innerText = 'Only 5 price fetches per minute';
+          });
+  }
+
+  // Fetch DOGE price on page load
+  fetchDogePrice();
+
+  // Refresh DOGE price every 30 seconds
+  setInterval(fetchDogePrice, 30000);
+</script>
 
 </html>
 

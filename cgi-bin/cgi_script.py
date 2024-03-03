@@ -33,29 +33,60 @@ print("""
     <!-- fake search bar -- or REAL search bar? (function)-->
 
     <nav class="main_nav">
-
-      <a href="https://www.amazon.com/">link</a>
       <!-- add nav links here -->
-      <input type="text" name="query" class="search_field" 
-      placeholder=" Enter a wallet address, txn hash, or contract address">
+      <div class="nav_links">
+        <ul class="nav_list">
+          <li><a href="https://www.youtube.com/watch?v=hxX9RaTWDnc">link</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">link</a></li>
+          <li><a href="https://www.youtube.com/watch?v=UBsIGF-KZZw">link</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Zfr3L0drhS8">link</a></li>
+          <li><a href="https://www.youtube.com/watch?v=C3rg4psdHxw">link</a></li>
+        </ul>
+      </div>
 
-      <button type="submit" class="search_btn">
-        <span class="search">search</span></button>
+
+      <div class="search_bar">
+        <input class="search_field" type="text" name="query" 
+        placeholder=" Enter a wallet address, txn hash, or contract address">
+        <button class="search_btn" type="submit">
+          <span class="search">search</span></button>
+      </div>
+
     </nav>
 
-
-
-
-
-    <!-- make side menus only nav links. -->
-    <div id="side_menu">
-      <nav>
-        <!-- add nav links here -->
-      </nav>
+    <div class="price_display">
+      <div id="doge_tag"><h3>Doge Price: </h3></div>
+      <div id="doge_price">Finding latest price...</div>
     </div>
-    
 
 
+
+    <script>
+      // Function to fetch and update the DOGE price
+      function fetchDogePrice() {
+          // I have no key for coingecko. Limits fetches to 5 per minute.
+          const apiKey = 'NO_KEY';
+          const apiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=dogecoin&vs_currencies=usd&apiKey=${apiKey}`;
+  
+          // Fetch DOGE price from CoinGecko API
+          fetch(apiUrl)
+              .then(response => response.json())
+              .then(data => {
+                  const dogePrice = data.dogecoin.usd;
+                  document.getElementById('doge_price').innerText = `$${dogePrice} USD`;
+              })
+              .catch(error => {
+                  console.error('Error fetching DOGE price:', error);
+                  document.getElementById('doge_price').innerText = 'Only 5 price fetches per minute';
+              });
+      }
+  
+      // Fetch DOGE price on page load
+      fetchDogePrice();
+  
+      // Refresh DOGE price every 30 seconds
+      setInterval(fetchDogePrice, 30000);
+  </script>
 
 
 
@@ -65,14 +96,10 @@ print("""
 
 
     <!-- Remove these breaks befor release -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<footer>
-    <!-- add contact info here -->
-</footer>
-
-</html>
 
 
 
@@ -92,6 +119,12 @@ print("""
   <form method="post" action="cgi_script.py">
     <p>message: <input type="text" name="input_message" /></p>
   </form>
+      
+<footer>
+    <!-- add contact info here -->
+</footer>
+
+
 </body>
 </html>
       
