@@ -15,6 +15,7 @@ print("""
 <head>
   <title>Dogesplorer</title>
   <link rel="stylesheet" href="../styles_05.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <meta charset="UTF-8">
   <meta name="description" content="Doge Blockhain explorer">
   <meta name="keywords" content="doge, crypto, cryptocoin, cryptocurrency, 
@@ -75,6 +76,7 @@ print("""
               .then(response => response.json())
               .then(data => {
                   const dogePrice = data.dogecoin.usd;
+                  console.log('updoot the prooce, ', dogePrice);
                   document.getElementById('doge_price').innerText = `$${dogePrice} USD`;
               })
               .catch(error => {
