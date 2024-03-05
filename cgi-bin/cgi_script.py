@@ -44,7 +44,6 @@ print("""
           <li><a href="/dir/dogegraph.html">graph</a></li>
           <li><a href="https://www.youtube.com/watch?v=UBsIGF-KZZw">link</a></li>
           <li><a href="https://www.youtube.com/watch?v=Zfr3L0drhS8">link</a></li>
-          <li><a href="https://www.youtube.com/watch?v=AhSEfKo0tlw">link</a></li>
           <li><a href="https://www.youtube.com/watch?v=C3rg4psdHxw">link</a></li>
         </ul>
       </div>
@@ -170,9 +169,8 @@ print("""
 <br><br>
 <h1>Doge Energy RN!</h1>
 
-<iframe src="https://archive.org/embed/interstella-5555-bluray" width="640" height="480" 
+<iframe src="https://www.youtube.com/embed/AhSEfKo0tlw" width="640" height="480" 
       frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-</div>
 
 </body>
 </html>
