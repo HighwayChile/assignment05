@@ -2,10 +2,14 @@
 cs290 Winter 2024 assignment 05  
 
 
-# NOTE
-------------------
-I cannot guarantee that the "assignment05.html" file is the same as the cgi_script  
+# REFLECTION NOTES
+"assignment05.html" file is not the same as the cgi_script  
 The intended way to run this page is from a python server using cgi script, and the main file is "cgi_script.py"  
+I struggled a lot with this material, but I think I was able to gain a good understanding. I think my most difficult struggle was
+with the css and cgi interaction. I had used a relative path and I needed to modify it to get it to work. I was deleting my entire css
+file and wondering why my page would still load with the styling somewhat working, although not completely. In the end, I figured it 
+out with the help of stackoverflow https://stackoverflow.com/questions/22588026/css-not-being-applied-in-cgi-script .
+
 
 
 # REQUIREMENTS  
@@ -27,28 +31,5 @@ I could set up a simple web API that uses the information from dogechain.info. I
 resources, most notably w3schools, geeksforgeeks, stackoverflow, and chatGPT. I will make better comments, and plan to 
 streamline styling. NOTE - I have found that "streamlining styling" won't happen if I want total control.    
 
-another resource I must use is the "Web API" one on dogechain.info
+another resource I must use is the "Web API" one on dogechain.info, switched to coingecko for API info.
 
-* mobile functionality in terms of display and usability - PRIORITIZE  
-* Create main page - done
-* search bar at top - done(doesn't do anything)
-* collapsible menu to the left - todo  
-* dynamic page creation upon search - backburner  
-* USE PYTHON SERVER TO RUN A FUNCTION THAT DOES SOMETHING. - PRIORITIZE!  
-  WHAT SHOULD MY FUNCTION DO? -Maybe make my search function save the search as text string in a file, then another button to call that text.  
-* add a news page  
-* add a sitemap  
-* add breadcrumbs (real ones this time?)  
-* use GET and POST  
-* add doge price GRAPH FUNCTION on it's own page first? - or delegate to API?  
-
-
-
-
-# GET/POST NOTES
-
-* GET is insecure and has a character limit. Never use GET for sensitive info  
-* POST is secure and is unlimited in terms of length.  
-* Use inside a python script. Python script runs the page by communicating with the server  
-* there is really only one page that will be fetched. What changes is the information being transmitted.  
-* make Dogesplorer the number 1 Doge Explorer on the 'net!  

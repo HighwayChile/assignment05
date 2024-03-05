@@ -1,13 +1,23 @@
+/* css styling for assignment 5 (cgi_script) */
+
 body {
     background-color: #e2ecf5;
-    /* margin-top: 20%; */
 }
+
 article {
     margin-top: 20%;
 }
 
 h1 {
     text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
 }
 
 .main_nav {
@@ -78,6 +88,8 @@ a:active {
 /* @media parameters */
 @media screen and (max-width: 800px) {
     .price_display {
-        margin-top: 10%;
+        float: left;
+        position: sticky;
+        top: 75px;
     }
 }
