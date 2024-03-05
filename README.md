@@ -2,6 +2,12 @@
 cs290 Winter 2024 assignment 05  
 
 
+# NOTE
+------------------
+I cannot guarantee that the "assignment05.html" file is the same as the cgi_script  
+The intended way to run this page is from a python server using cgi script, and the main file is "cgi_script.py"  
+
+
 # REQUIREMENTS  
 
   1. Create yet another design for a web app that you would want to use… this should go quickly for us now!  
